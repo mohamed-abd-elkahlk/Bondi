@@ -1,0 +1,161 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.main-btn{
+    background-color:var(--red-color) ;
+    color: var(--yellow-color);
+}
+.main-btn:hover{
+    background-color: var(--red-color);
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    background-color: var(--green-color);
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*! start navbar */
+.navbar{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+.navbar .nav-link{
+    color: #fff;
+}
+.navbar  .navbar-nav .active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover{
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color);
+}
+.navbar .navbar-toggler,
+.navbar .navbar-toggler:focus{
+    color: #fff;
+    border-color: white;
+    box-shadow: none;
+}
+/*! End navbar */
+/*! start landing  */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/*! end landing  */
+/*! Start features */
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%)
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon{
+    color: var(--green-color);
+}
+.features h4{
+    color: var(--yellow-color);
+}
+/*! End features */
+/* !Start our-work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li{
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--red-color);
+    transition: .3s;
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc77;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--yellow-color);
+    font-weight: bold;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before{
+    transform: translateX(0);
+    transition: .3s;
+}
+/* !End our-work */
+/*! Start team */
+.our-team{
+    background-color: var(--section-color);
+}
+.our-team h2{
+    color: var(--yellow-color);
+}
+.our-team .box h4{
+    background-color: var(--green-color);
+}
+/*! End team */
+/*! Start project*/
+.project{
+    background-color: var(--dark-color);
+}
+/*! End project*/
+/*! Start sub  */
+.sub{
+    background-color: var(--yellow-color);
+}
+.sub input[type="text"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+.sub ::placeholder{
+    color: white;
+}
+.sub input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/*! End sub  */
+/*! Start footer */
+.footer{
+    background-color: var(--dark-color);
+}
+/*! End footer */
